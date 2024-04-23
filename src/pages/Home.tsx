@@ -3,8 +3,12 @@ import styled from "styled-components";
 import Wrapper from "../components/Wrapper";
 import { Buttons } from "../snippets/Buttons";
 
+type StyledButtonProps = {
+  css?: string;
+};
+
 const Home = () => {
-  const StyledButton = styled.div`
+  const StyledButton = styled.div<StyledButtonProps>`
     ${({ css }) => css}
   `;
   return (
