@@ -1,9 +1,11 @@
-import styled from "styled-components";
-
-const html = `<button class="btn">Hover me</button>`;
-const css = ` background-color: #00bfa6;
+export const Buttons = [
+  {
+    id: 1,
+    html: `<button class="btn">Hover me</button>`,
+    css: `background-color: #00bfa6;
 padding: 14px 40px;
 color: #fff;
+text-align: center;
 text-transform: uppercase;
 letter-spacing: 2px;
 cursor: pointer;
@@ -21,11 +23,6 @@ transition: 0.4s;
 
 &:active {
     background-color: #87dbd0;
-}`;
-
-const StyledButton = styled.div`
-  ${css}
-`;
-export const Button1 = () => (
-  <StyledButton dangerouslySetInnerHTML={{ __html: html }} />
-);
+}`,
+  },
+];
