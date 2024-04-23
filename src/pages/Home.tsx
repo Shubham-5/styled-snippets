@@ -15,7 +15,7 @@ const Home = () => {
     <div className="mt-4">
       <div className="flex flex-wrap gap-4">
         {Buttons.map((btn) => (
-          <Wrapper>
+          <Wrapper html={btn.html} css={btn.css}>
             <StyledButton
               key={btn.id}
               css={btn.css}
