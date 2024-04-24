@@ -31,7 +31,7 @@ export function Drawer() {
               {snippet}
             </VaulDrawer.Title>
             <p className="text-zinc-600 mb-2"></p>
-            <SyntaxHighlighter language={snippet} style={dark}>
+            <SyntaxHighlighter language={snippet ?? "html"} style={dark}>
               {snippet === "html" ? htmlSnippet : cssSnippet}
             </SyntaxHighlighter>
           </div>
