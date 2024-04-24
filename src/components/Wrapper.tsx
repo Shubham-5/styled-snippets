@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { MdHtml, MdCss } from "react-icons/md";
+
 import { VaulDrawer } from "./Drawer";
 import { useSnippetStore } from "../store";
 
@@ -27,10 +29,14 @@ const Wrapper = (props: Props) => {
           Preview
         </p>
         <VaulDrawer.Trigger onClick={() => onSnippetClick("html")}>
-          <p className="p-2 cursor-pointer">HTML</p>
+          <p className="p-2 cursor-pointer">
+            <MdHtml size={26} />
+          </p>
         </VaulDrawer.Trigger>
         <VaulDrawer.Trigger onClick={() => onSnippetClick("css")}>
-          <p className="p-2 cursor-pointer">CSS</p>
+          <p className="p-2 cursor-pointer">
+            <MdCss size={26} />
+          </p>
         </VaulDrawer.Trigger>
       </div>
 

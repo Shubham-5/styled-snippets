@@ -23,7 +23,7 @@ export function Drawer() {
   return (
     <VaulDrawer.Portal>
       <VaulDrawer.Overlay className="fixed inset-0 bg-black/40" />
-      <VaulDrawer.Content className="bg-zinc-100 flex flex-col rounded-t-[10px] h-screen w-[320px] md:w-fit mt-24 fixed bottom-0 right-0">
+      <VaulDrawer.Content className="bg-zinc-100 flex flex-col rounded-t-[10px] h-screen w-[400px] md:w-fit mt-24 fixed bottom-0 right-0">
         <div className="flex bg-white flex-1 rounded-l-[10px] h-full">
           <div className="my-auto w-1.5 h-12 flex-shrink-0 rounded-full bg-zinc-300 ml-2" />
 
