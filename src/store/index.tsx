@@ -1,15 +1,22 @@
 import { create } from "zustand";
 
-interface SnippetState {
-  html: string;
-  css: string;
-  setHtml: (html: string) => void;
-  setCss: (css: string) => void;
-}
+type SnippetState = {
+  htmlSnippet: string;
+  cssSnippet: string;
+  snippet: "html" | "css" | null;
+  setSnippet: (snippet: "html" | "css") => void;
+  setHtmlSnippet: (html: string) => void;
+  setCssSnippet: (css: string) => void;
+};
 
 export const useSnippetStore = create<SnippetState>()((set) => ({
-  html: "",
-  css: "",
-  setHtml: (html: string) => set((state) => ({ ...state, html: html })),
-  setCss: (css: string) => set((state) => ({ ...state, css: css })),
+  htmlSnippet: "",
+  cssSnippet: "",
+  snippet: null,
+  setSnippet: (snippet: "html" | "css") =>
+    set((state) => ({ ...state, snippet })),
+  setHtmlSnippet: (htmlSnippet: string) =>
+    set((state) => ({ ...state, htmlSnippet })),
+  setCssSnippet: (cssSnippet: string) =>
+    set((state) => ({ ...state, cssSnippet })),
 }));

@@ -7,17 +7,16 @@ type StyledButtonProps = {
   css?: string;
 };
 
+const StyledButton = styled.div<StyledButtonProps>`
+  ${({ css }) => css}
+`;
 const Home = () => {
-  const StyledButton = styled.div<StyledButtonProps>`
-    ${({ css }) => css}
-  `;
   return (
     <div className="mt-4">
       <div className="flex flex-wrap gap-4">
         {Buttons.map((btn) => (
-          <Wrapper html={btn.html} css={btn.css}>
+          <Wrapper key={btn.id} html={btn.html} css={btn.css}>
             <StyledButton
-              key={btn.id}
               css={btn.css}
               dangerouslySetInnerHTML={{ __html: btn.html }}
             />
