@@ -24,22 +24,18 @@ const Wrapper = (props: Props) => {
   }
   return (
     <div className="border shadow-sm rounded-lg w-full md:w-fit">
-      <div className="flex items-center justify-between border-b text-sm pe-2">
-        <p className="bg-slate-500 rounded-sm p-2 font-medium text-white">
-          Preview
-        </p>
+      <div className="flex justify-end gap-4 p-4 border-b shadow-sm">
         <VaulDrawer.Trigger onClick={() => onSnippetClick("html")}>
-          <p className="p-2 cursor-pointer">
-            <MdHtml size={26} />
+          <p className="cursor-pointer hover:text-gray-500">
+            <MdHtml size={26} className="mx-auto" />
           </p>
         </VaulDrawer.Trigger>
         <VaulDrawer.Trigger onClick={() => onSnippetClick("css")}>
-          <p className="p-2 cursor-pointer">
-            <MdCss size={26} />
+          <p className="cursor-pointer  hover:text-gray-500">
+            <MdCss size={26} className="mx-auto" />
           </p>
         </VaulDrawer.Trigger>
       </div>
-
       <div className="p-4">{props.children}</div>
     </div>
   );
