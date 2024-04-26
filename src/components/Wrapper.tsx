@@ -23,7 +23,7 @@ const Wrapper = (props: Props) => {
     }
   }
   return (
-    <div className="border shadow-sm rounded-lg w-full md:w-fit">
+    <div className="border shadow-sm rounded-lg w-full md:w-fit h-fit">
       <div className="flex justify-end gap-4 p-4 border-b shadow-sm">
         <VaulDrawer.Trigger onClick={() => onSnippetClick("html")}>
           <p className="cursor-pointer hover:text-gray-500">
