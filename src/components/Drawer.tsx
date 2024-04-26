@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Drawer as VaulDrawer } from "vaul";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import { useSnippetStore } from "../store";
 
@@ -41,7 +41,11 @@ export function Drawer() {
                 </div>
               </div>
 
-              <SyntaxHighlighter language={snippet ?? "html"} style={dark}>
+              <SyntaxHighlighter
+                language={snippet ?? "html"}
+                style={github}
+                className="rounded-md text-md select-text"
+              >
                 {snippet === "html" ? htmlSnippet : cssSnippet}
               </SyntaxHighlighter>
             </div>
