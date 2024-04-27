@@ -28,4 +28,36 @@ export const Buttons = [
         background-color: #87dbd0;
     }`,
   },
+
+  {
+    id: uuidv4(),
+    title: "Button hover effect",
+    html: `<button>hover me</button>`,
+    css: `
+    button {
+        border: 0;
+        background: transparent;
+        position: relative;
+        padding: 1rem 2rem;
+        background: hsl(0 0% 96%);
+        cursor: pointer;
+    }
+    
+    button::after {
+        content: "";
+        background: white;
+        position: absolute;
+        inset: 0;
+        mix-blend-mode: difference;
+        scale: 0 1;
+        transform-origin: 100% 50%;
+        transition: scale 0.2s ease-in-out;
+        pointer-events: none;
+    }
+    
+    button:is(:hover, :focus-visible)::after {
+        scale: 1 1;
+        transform-origin: 0 50%;
+    }  `,
+  },
 ];
