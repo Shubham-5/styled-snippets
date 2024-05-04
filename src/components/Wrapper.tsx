@@ -36,7 +36,9 @@ const Wrapper = (props: Props) => {
           </p>
         </VaulDrawer.Trigger>
       </div>
-      <div className="p-4">{props.children}</div>
+      <div className="p-4 flex justify-center items-center">
+        {props.children}
+      </div>
     </div>
   );
 };
