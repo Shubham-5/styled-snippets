@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 export const Loaders = [
   {
     id: uuidv4(),
-    title: "Animated underline effect",
+    title: "Loading bar",
     html: `
     <div class="loader">
         <label>Redirecting...</label>
@@ -70,5 +70,42 @@ export const Loaders = [
         }
       }      
     `,
+  },
+
+  {
+    id: uuidv4(),
+    title: "",
+    html: `
+    <div class="loader">
+        <span></span>
+    </div>`,
+
+    css: `
+    .loader {
+        --color: #a5a5b0;
+        --size: 40px;
+        position: relative;
+        width: var(--size);
+        height: var(--size);
+      }
+      
+      .loader span {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1.5px solid var(--color);
+        border-bottom: 1px solid transparent;
+        border-radius: 100%;
+        animation: keyframes-rotate .8s infinite linear;
+      }
+      
+      @keyframes keyframes-rotate {
+        0% {
+          transform: rotate(360deg);
+        }
+      }
+      `,
   },
 ];
