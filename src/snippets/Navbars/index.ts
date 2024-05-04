@@ -5,12 +5,11 @@ export const Navbars = [
     id: uuidv4(),
     title: "Animated underline effect",
     html: `
-<ul>
-  <li>Home</li>
-  <li>About</li>
-  <li>Services</li>
-  <li>Contact Us</li>
-</ul>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+    </ul>
 `,
 
     css: `

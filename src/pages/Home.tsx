@@ -12,7 +12,7 @@ const StyledSnippet = styled.div<StyledSnippetProps>`
 `;
 const Home = () => {
   return (
-    <div className="mt-4">
+    <div className="mt-4 w-full">
       <div className="flex flex-wrap gap-4">
         {Snippets.map((snippet) => (
           <Wrapper key={snippet.id} html={snippet.html} css={snippet.css}>
