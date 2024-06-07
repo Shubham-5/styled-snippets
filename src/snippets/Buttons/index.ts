@@ -60,4 +60,34 @@ export const Buttons = [
         transform-origin: 0 50%;
     }  `,
   },
+
+  {
+    id: uuidv4(),
+    title: "Button hover",
+    html: `<button>Gradient Hover</button>`,
+    css: `
+    button {
+      background-color: #444141;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border: none;
+     }
+     
+     button:hover {
+      background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+      animation: gradientSlide 5s linear infinite;
+      color: #000;
+     }
+     
+     @keyframes gradientSlide {
+      to {
+       background-position: 20vw;
+      }
+     }`,
+  },
 ];
